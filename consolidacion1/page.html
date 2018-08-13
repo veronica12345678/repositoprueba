@@ -1,0 +1,122 @@
+
+<html>
+<head>
+  <meta charset="utf-8" content="text/html">
+  <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="script3.js"></script>
+  <script type="text/javascript" src="qrcode.js"></script>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  <title>Programacion Multimedia</title>
+  <meta name="description" content="website description">
+  <meta name="keywords" content="website keywords, website keywords">
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style">
+</head>
+<div id="main">
+  <div id="header">
+    <div id="logo">
+      <div id="logo_text">
+        <!-- class="logo_colour", allows you to change the colour of the text -->
+        <h1><a href="index.html"><span class="logo_colour"></span></a></h1>
+      </div>
+    </div>
+    <div id="menubar">
+      <ul id="menu">
+        <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+        <li><a href="index.html">Cliente</a></li>
+        <li><a href="examples.html">Producto</a></li>
+        <li class="selected"><a href="page.html">Compra y Venta</a></li>
+        <li><a href="another_page.html">Codigo QR</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<body>
+  <div id="site_content">
+    <div class="ComVen">
+      <p></p>
+      <td><label>COD.CLIENTE:</label></td>
+      <input type="number" id="codcliente" placeholder="Cod.cliente" pattern="{1,40}" required>
+      <p></p>
+      <td><label>NOMBRE:</label></td>
+      <input type="text" id="nombre" placeholder="Nombre"pattern="[A-Za-z]{1,40}" required>
+      <p></p>
+      <td><label>RUC:</label></td>
+      <input type="number" id="ruc" placeholder="Ruc" pattern="{1,40}" required>
+      <p></p>
+      <td><label>DIRECCION:</label></td>
+      <input type="text" id="direccion" placeholder="Direccion" pattern="[A-Za-z]{1,40}" required>
+      <p></p>
+      <td><label>TELEFONO:</label></td>
+      <input type="number" id="telefono" placeholder="Telefono"pattern="{1,40}" required>
+      <p></p>
+      <td><label>COD.PRODUCTO:</label></td>
+      <input type="number" id="codproducto" placeholder="Cod.Producto" pattern="{1,40}" required>
+      <p></p>
+      <td><label>CANTIDAD:</label></td>
+      <input type="number" id="cantidad" placeholder="Cantidad"pattern="{1,40}" required>
+      <p></p>
+      <td><label>DESCRIPCION:</label></td>
+      <input type="text" id="descripcion" placeholder="Descripcion" pattern="[A-Za-z]{1,40}" required>
+      <p></p>
+      <td><label>MODELO:</label></td>
+      <input type="text" id="modelo" placeholder="Modelo" pattern="[A-Za-z]{1,40}" required>
+      <p></p>
+      <td><label>COD.ID:</label></td>
+      <input type="number" name="codid" id="codid" placeholder="Cod.id" pattern="{1,40}" required>
+      <p></p>
+      <label>FABRICANTE:</label>
+      <input type="text" id="fabricante" placeholder="Fabricante" pattern="[A-Za-z]{1,40}" required>
+      <p></p>
+      <button id="Agregar3">Agregar3</button>
+      <a href="leer3.php">compray</a>
+    </div>
+    <div class="Factura" style="display:none;">
+      <input type="button" name="cerrar" value=" X " style="float: right; margin: 2%;">
+      <div align="center"><h1 id="codidt">Factura N° </h1></div>
+      <div class="contenido" style="padding-left: 5%; padding-right: 5%;">
+        <div id="CodCliente">cod</div>
+        <div id="Nombre">nombre</div>
+        <div id="Ruc">hla</div>
+        <div id="direcciont">asdads</div>
+        <div id="telefonot">adwdas</div>
+      </div>
+      <hr>
+      <div class="producto" style="padding-left: 5%; padding-right: 5%;">
+        <table>
+          <thead>
+            <th>Codigo del producto</th>
+            <th>Descripción</th>
+            <th>Modelo</th>
+            <th>Fabricante</th>
+            <th>Cantidad</th>
+            <th>Precio Unitario</th>
+            <th>Precio Total</th>
+          </thead>
+          <tbody id="pre">
+
+          </tbody>
+          <tr>
+            <td COLSPAN="5"></td>
+            <th>Sub total</th>
+            <td id="subt"></td>
+          </tr>
+          <tr>
+            <td COLSPAN="5"></td>
+            <th>I.V.A</th>
+            <td id="iva"></td>
+          </tr>
+          <tr>
+            <td COLSPAN="5"></td>
+            <th>total</th>
+            <td id="total"></td>
+          </tr>
+        </table>
+        <div>
+          <span id="qr" style="width: 50%"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer"></div>
+</body>
+</html>
